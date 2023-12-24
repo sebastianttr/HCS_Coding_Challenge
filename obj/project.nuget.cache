@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2NceW2LMVDMM85UDMLpp3kLwCyi0XQakb+01Jycw42Qzi2vqzr3Z2xCHShYgwXRzaaE1vUuU0ZLGaCqhcuhIHQ==",
+  "success": true,
+  "projectFilePath": "/Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/coding_challenge.csproj",
+  "expectedPackageFiles": [
+    "/Users/sebastiantatar/.nuget/packages/nunit/4.0.1/nunit.4.0.1.nupkg.sha512",
+    "/Users/sebastiantatar/.nuget/packages/nunitlite/4.0.1/nunitlite.4.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

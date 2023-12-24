@@ -1,0 +1,157 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "NUnit/4.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net6.0/nunit.framework.legacy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net6.0/nunit.framework.legacy.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
+      "NUnitLite/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NUnit": "[4.0.1]"
+        },
+        "compile": {
+          "lib/net8.0/nunitlite.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/nunitlite.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NUnit/4.0.1": {
+      "sha512": "jNTHZ01hJsDNPDSBycoHpavFZUBf9vRVQLCyuo78LRrrFj6Ol/CeqK+NIeTk5d8Eycjk59KseWb7X5Ge6z7CgQ==",
+      "type": "package",
+      "path": "nunit/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.md",
+        "README.md",
+        "THIRD_PARTY_NOTICES.md",
+        "build/NUnit.props",
+        "icon.png",
+        "lib/net462/nunit.framework.dll",
+        "lib/net462/nunit.framework.legacy.dll",
+        "lib/net462/nunit.framework.legacy.xml",
+        "lib/net462/nunit.framework.xml",
+        "lib/net6.0/nunit.framework.dll",
+        "lib/net6.0/nunit.framework.legacy.dll",
+        "lib/net6.0/nunit.framework.legacy.xml",
+        "lib/net6.0/nunit.framework.xml",
+        "nunit.4.0.1.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "NUnitLite/4.0.1": {
+      "sha512": "tB0Q18N6s8C8WikkTD7yyGEAYruGi6UYesTZdY29mUdsU5ivg5+G0OezxJFWeHF/lbZwoA76lcL0HMr6HXILKA==",
+      "type": "package",
+      "path": "nunitlite/4.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.md",
+        "THIRD_PARTY_NOTICES.md",
+        "icon.png",
+        "lib/net462/nunitlite.dll",
+        "lib/net6.0/nunitlite.dll",
+        "lib/net8.0/nunitlite.dll",
+        "nunitlite.4.0.1.nupkg.sha512",
+        "nunitlite.nuspec",
+        "tools/net462/nunitlite-runner.exe"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "NUnitLite >= 4.0.1"
+    ]
+  },
+  "packageFolders": {
+    "/Users/sebastiantatar/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/coding_challenge.csproj",
+      "projectName": "coding_challenge",
+      "projectPath": "/Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/coding_challenge.csproj",
+      "packagesPath": "/Users/sebastiantatar/.nuget/packages/",
+      "outputPath": "/Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/sebastiantatar/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "NUnitLite": {
+            "target": "Package",
+            "version": "[4.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
