@@ -11,24 +11,8 @@ namespace HCS_Tatar
     class Program
     {
         // define a constant. amount of invalid inputs during selection
-        const int MAX_TRY_TILL_END = 5;
+        const int MaxTryTillEnd = 5;
         
-        /*
-    
-        Explanation of Regex pattern. 
-        
-        This regex matches two groups
-        
-        First group: (.*)?[?]
-        Matches the question. So every text content that has a question mark at the end
-        
-        Second group: (.*["].{0,}[^\s"]["])+?$
-        Matches every answers that are surrounded are valid string and are surrounded by string literals. 
-        
-        There is also a 0 Group.That one matches to the entire text.
-        
-        */
-
         static int Main(string[] args) {
             // before the program starts, check if it is a test run or a normal program run
             // check if it has -test option
@@ -104,7 +88,7 @@ namespace HCS_Tatar
                         Console.WriteLine("Invalid input!");
                         tryCounter++;
 
-                        if (tryCounter >= MAX_TRY_TILL_END) {
+                        if (tryCounter >= MaxTryTillEnd) {
                             Console.WriteLine("To many invalid inputs. Ending the program.");
                             
                             // break array

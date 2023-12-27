@@ -9,12 +9,28 @@ namespace HCS_Tatar.Manager;
  * This is inside a class because we need it for the testability of the program.
  *
  */
+
+/*
+    Explanation of Regex pattern for the question.
+    
+    (.*)?[?] (.*["].{0,}[^\s"]["])+?$
+    
+    This regex matches two groups
+    
+    First group: (.*)?[?]
+    Matches the question. So every text content that has a question mark at the end
+    
+    Second group: (.*["].{0,}[^\s"]["])+?$
+    Matches every answers that are valid strings and are surrounded by string literals. 
+    
+    There is also a 0 Group. That one matches to the entire text.
+*/
 public class QuestionAnswerManager
 {
     const string QuestionPattern = @"(.*)?[?] (.*[""].{0,}[^\s""][""])+?$";
     const int MaxStrLen = 255;
 
-    private Dictionary<string, HashSet<string>?> questionsAnswers = new();
+    private readonly Dictionary<string, HashSet<string>?> _questionsAnswers = new();
 
     public bool GetQuestionPrompt(string? input = null)
     {
@@ -57,7 +73,7 @@ public class QuestionAnswerManager
             }
 
             // add to the dictionary
-            questionsAnswers[questionToAdd] = answers;
+            _questionsAnswers[questionToAdd] = answers;
             return true;
         }
 
@@ -74,7 +90,7 @@ public class QuestionAnswerManager
         string? question = input ?? Console.ReadLine();
                                 
         if (question != null ) {
-            bool isKeyExists = questionsAnswers.TryGetValue(question, out HashSet<string>? answers);
+            bool isKeyExists = _questionsAnswers.TryGetValue(question, out HashSet<string>? answers);
                                     
             if(isKeyExists)
                 foreach (string answer in answers ?? new HashSet<string> ())

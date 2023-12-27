@@ -17,3 +17,4 @@
 /Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/obj/Debug/net8.0/coding_challenge.pdb
 /Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/obj/Debug/net8.0/coding_challenge.genruntimeconfig.cache
 /Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/obj/Debug/net8.0/ref/coding_challenge.dll
+/Users/sebastiantatar/Documents/Media/Personal Stuff/Jobs/job_application_2024/Job_8_CGM/coding_challenge/obj/Debug/net8.0/coding_challenge.sourcelink.json

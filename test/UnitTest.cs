@@ -37,10 +37,10 @@ namespace HCS_Tatar
         }
         
         [Test, Order(2)]
-        [TestCase("What is Jane's favorite colors?", new [] {"Red", "Purple" })]
-        [TestCase("What is Peters favorite food?", new [] {"Pizza", "Spaghetti", "Ice cream" })]
-        [TestCase("What are three german car brands?", new [] {"Volkswagen", "Mercedes", "Audi" })]
-        public void RetrieveAnswerTest(string input, string[] answers)
+        [TestCase("What is Jane's favorite colors?", new [] {"Red", "Purple" },true)]
+        [TestCase("What is Peters favorite food?", new [] {"Pizza", "Spaghetti", "Ice cream" },true)]
+        [TestCase("What are three german car brands?", new [] {"Volkswagen", "Mercedes", "Nissan" },false)]
+        public void RetrieveAnswerTest(string input, string[] answers, bool isPass)
         {
             (bool isPrompt,HashSet<string> ans) = _questionAnswerManager.GetAnswersPrompt(input);
 
@@ -49,7 +49,7 @@ namespace HCS_Tatar
             
             HashSet<string> answerSet = answers.ToHashSet();
             
-            if(isPrompt && ans.SetEquals(answerSet))
+            if(isPrompt && ans.SetEquals(answerSet) == isPass)
                 Assert.Pass();
             else 
                 Assert.Fail();
